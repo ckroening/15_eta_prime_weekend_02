@@ -96,6 +96,7 @@ QUnit.test('bodyText', function(assert) {
     assert.equal($('#test').text(), 'Hello.');
 });
 
-QUnit.test('ajaxGet', function(assert) {
-
+QUnit.test('Get Handlebar Template', function(assert) {
+  assert.ok($('#testTemplate').length);
 });
+
