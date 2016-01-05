@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <script type="text/javascript" src="/vendors/jquery.min.js"></script>
-    <script type="text/javascript" src="/vendors/handlebars.min.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-</head>
-<body>
-<p id="test">Hello.</p>
-<script id="testTemplate" type="text/x-handlebars-template">Example</script>
-</body>
-
+    <head>
+        <meta charset="UTF-8">
+        <title>Weekend Challenge 02: Eta Movies</title>
+        <link rel="stylesheet" href="../styles/style.css">
+        <script src="../vendors/jquery.min.js"></script>
+        <script src="../vendors/handlebars.min.js"></script>
+        <script src="../scripts/app.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>test</h1>
+        </header>
+        <div id="students"></div>
+        <div id="movies"></div>
+        <script id="student-template" type="text/x-handlebars-template">
+            <main>
+                <section class="prev">
+                    <h2>{{prevFirstName}}</h2>
+                    <h3>{{prevLastName}}</h3>
+                    <button class="prev">previous</button> <!--normal html button here.-->
+                </section>
+                <section class="current">
+                    <h2>{{firstName}}</h2>
+                    <h3>{{lastName}}</h3>
+                </section>
+                <section class="next">
+                    <h2>{{nextFirstName}}</h2>
+                    <h3>{{nextLastName}}</h3>
+                    <button class="next">next</button>
+                </section>
+            </main>
+        </script>
+        <script id="movie-template" type="text/x-handlebars-template">
+            <section class="movies">
+                {{#each favoriteMovies}}
+                <h2> {{movieName}} {{releaseYear}} </h2>
+                {{/each}}
+            </section>
+        </script>
+    </body>
 </html>

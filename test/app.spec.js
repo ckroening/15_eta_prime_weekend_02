@@ -100,3 +100,10 @@ QUnit.test('Get Handlebar Template', function(assert) {
   assert.ok($('#testTemplate').length);
 });
 
+QUnit.test('Check Handlebars', function(assert)) {
+  assert.ok($()
+}
+
+Qunit.test('Append to Body', function(assert)) {
+  
+}
